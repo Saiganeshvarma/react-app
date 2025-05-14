@@ -1,13 +1,15 @@
 import React from 'react'
-import Nav from './nav'
-import Content from './content'
+import Header from './header'
+import Middle from './middle'
+import Footer from './footer'
 function App(){
-    return(
-        <div>
-            <h1>hello world</h1>
-
-        </div>
-    )
+  return(
+    <div>
+      <Header/>
+      <Middle/>
+      <Footer/>
+    </div>
+  )
 }
 
 export default App
