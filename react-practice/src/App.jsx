@@ -1,17 +1,19 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
-function App(){
-    var result = true
-    var output
-    if(result){
-        output = <h1>hello world1</h1>
-    }else{
-        output = <h1>hello world2</h1>
-    }
+const App = () => {
+    var [count,setCount] = useState(0)
 
-    return(
-        <div>{output}</div>
-    )
+    useEffect(()=>{
+        console.log(count);
+
+    },[])
+
+  return (
+    <div>
+        <h1>{count}</h1>
+        <button onClick={()=>{setCount(count+1)}}>increment</button>
+    </div>
+  )
 }
 
 export default App
