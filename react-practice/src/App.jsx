@@ -6,7 +6,7 @@ function App(){
     if(result){
         output = <h1>hello world1</h1>
     }else{
-        output = <h1>hello world2
+        output = <h1>hello world2</h1>
     }
 
     return(
