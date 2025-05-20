@@ -4,15 +4,12 @@ import './index.css'
 
 
 import App from './App'
-import Header from './header'
+
 
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-
     <App/>
-    <Header/>
-
   </StrictMode>
 )
 
