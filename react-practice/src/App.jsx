@@ -1,22 +1,17 @@
 import React from 'react'
-import products from './products'
 
 function App(){
-  return(
-    <div>
-      {
-        products.map((item)=>{
-          return(
-            <div>
-              <h1>{item.id}</h1>
-              <h2>{item.name}</h2>
+    var result = true
+    var output
+    if(result){
+        output = <h1>hello world1</h1>
+    }else{
+        output = <h1>hello world2</h1>
+    }
 
-            </div>
-          )
-        })
-      }
-    </div>
-  )
+    return(
+        <div>{output}</div>
+    )
 }
 
 export default App
