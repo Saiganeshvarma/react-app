@@ -1,19 +1,23 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
-const App = () => {
-    var [count,setCount] = useState(0)
+function App(){
+    var [value,setValue] = useState(0)
+    var count = useRef(0)
 
     useEffect(()=>{
-        console.log(count);
+        count.current = count.current+1
+        console.log(count.current);
 
-    },[])
+    })
+    return(
+        <div>
+            <button onClick={()=>{setValue(value+1)}}>+1</button>
+            <h1>{value}</h1>
+            <button onClick={()=>{setValue(value-1)}}>-1</button>
+            <h1>rendered {count.current}</h1>
 
-  return (
-    <div>
-        <h1>{count}</h1>
-        <button onClick={()=>{setCount(count+1)}}>increment</button>
-    </div>
-  )
+        </div>
+    )
 }
 
 export default App
