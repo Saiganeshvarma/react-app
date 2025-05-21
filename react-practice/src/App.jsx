@@ -1,16 +1,22 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 
 function App(){
-    var result = true
-    var output
-    if(result){
-        output = <h1>hello world1</h1>
-    }else{
-        output = <h1>hello world2</h1>
-    }
+    var [value,setValue] = useState(0)
+    var count = useRef(0)
 
+    useEffect(()=>{
+        count.current = count.current+1
+        console.log(count.current);
+
+    })
     return(
-        <div>{output}</div>
+        <div>
+            <button onClick={()=>{setValue(value+1)}}>+1</button>
+            <h1>{value}</h1>
+            <button onClick={()=>{setValue(value-1)}}>-1</button>
+            <h1>rendered {count.current}</h1>
+
+        </div>
     )
 }
 
